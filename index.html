@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jazz Hangman Game</title>
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    
-    
+
+
     <!-- <div id="instructions">
         <p>Instructions: Try and guess the phrase. They're all records or musicians relevant to jazz, mostly in the 1960's. Press any key to start!</p>
     </div> -->
+    <div class="container">
 
-    <div id="game">
-    
-        <div id="wins">
-            <p>Wins: </p>
-        </div>
+        <div id="game">
+            <!-- Stats -->
+            <div class="row">
+                <!-- Wins -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wins</h5>
+                            <p class="card-text" id="wins">0</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Losses -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Losses</h5>
+                            <p class="card-text" id="losses">0</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Guesses Remaining -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Guesses Remaining</h5>
+                            <p class="card-text" id="guesses-remaining"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wrong Letters -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wrong Letters</h5>
+                            <p class="card-text" id="wrong-letters"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Puzzle -->
+            <div class="jumbotron">
+                    <h1 class="display-4">Solve This!</h1>
+                    <p class="lead" id="hint"></p>
+                    <hr class="my-4">
+                    <p id="phrase" class="text-center">Press any key to start!</p>
+                  </div>
+            <!-- Image -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="image">
+                </div>
+            </div>
+            
 
-        <div id="losses">
-            <p>Losses: </p>
-        </div>
+            </div>
 
-        <div id="guesses-remaining">
-            <p>Guesses Remaining: </p>
-        </div>
 
-        <div id="wrong-letters">
-            <p>Wrong letters: </p>
         </div>
-
-        <div id="hint">
-            <p>Hint: </p>
-        </div>
-        <div id="solve-this">
-            <p>Solve This: </p>
-            <div id="phrase"></div>
-        </div>
-        
-        
     </div>
 
     <script src="./assets/javascript/game.js"></script>
 </body>
+
 </html>
